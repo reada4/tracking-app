@@ -1,0 +1,26 @@
+.stats {
+	position: absolute;
+	top: 0px; /* header is 44px high */
+	left: 2px;
+	font-size: 0.6em;
+}
+
+.group {
+	position: absolute;
+	bottom: 20px;
+	right: 5px;
+}
+
+.map-content {
+    position: absolute;
+    top: 44px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 0 !important;
+}
+
+.route-map {
+    height: 100%;
+}
+ 

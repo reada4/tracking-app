@@ -1,0 +1,119 @@
+<!doctype html>
+<!--
+ *
+ * Assignment 2 web app
+ * 
+ * Copyright (c) 2014-2015  Monash University
+ *
+ * Written by Michael Wybrow and Nathan Sherburn
+ *
+ * Original prototype by Xuhui Zhang
+ *
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="author" content="Nathan Sherburn, Michael Wybrow, Xuhui Zhang">
+<meta name="description" content="Monash University, Australia. All rights reserved.">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css" />
+<link rel="stylesheet" href="css/jquery.cftoaster.1.0.1.css" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="css/leaflet-0.7.3.css" />
+<link rel="shortcut icon" sizes="196x196" href="locationapp.png" />
+<link rel="apple-touch-icon-precomposed" href="locationapp.png" />
+<title>Walking Routes</title>
+</head>
+<body>
+
+  
+ 
+	<!-- START PAGE -->
+	<div data-role="page" id="routes-list-page">
+
+		<div data-role="header">
+			<h1>Walking Routes</h1>
+		</div>
+        
+        <div data-role="content">
+            <ul id="results-list" data-role="listview"></ul>
+		</div>
+	</div> 
+
+
+
+	<!-- NEW ROUTE PAGE -->
+	<div data-role="page" id="new-route-page">
+		<div data-role="header">
+			<h1>Record route</h1>
+            <a href="#no" class="ui-btn ui-corner-all ui-btn-right ui-btn-a" onclick="newRoutePageController.done()">Done</a>
+		</div>
+
+        <div data-role="content" class="map-content">
+            <div id="new-route-page-map" class="route-map"></div>
+
+            <div class="stats"></div>
+
+            <div id="new-route-page-controls"></div>
+        </div>
+
+	</div> 
+
+
+	<!-- VIEW ROUTE PAGE -->
+	<div data-role="page" id="view-route-page">
+
+		<div data-role="header">
+			<h1>View route</h1>
+            <a href="#no" class="ui-btn ui-corner-all ui-btn-right ui-btn-a" onclick="viewRoutePageController.done()">Done</a>
+		</div>
+
+        <div data-role="content" class="map-content">
+            <div id="view-route-page-map" class="route-map"></div>
+            <div id="view-route-page-controls"></div>
+        </div>
+
+
+	</div> 
+
+	<!-- LIBRARIES / PLUGINS -->
+	<script src="scripts/jquery-1.11.1.min.js"></script>
+	<script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+	<script src="scripts/leaflet-0.7.3.js"></script>
+	<script src="scripts/L.CanvasOverlay.js"></script>
+	<script src="scripts/jquery.cftoaster.1.0.1.min.js"></script>
+
+	<!-- SCRIPTS -->
+	<script src="scripts/RoutesListPageController.js"></script>
+	<script src="scripts/MapWithOverlay.js"></script>
+	<script src="scripts/MapPageController.js"></script>
+	<script src="scripts/Solution.js"></script>
+    <!-- main.js should be last, as it initialises things: -->
+	<script src="scripts/main.js"></script>
+    
+    
+    
+    
+</body>
+</html>
